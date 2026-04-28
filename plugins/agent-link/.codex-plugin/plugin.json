@@ -1,0 +1,42 @@
+{
+  "name": "agent-link",
+  "version": "0.1.0",
+  "description": "Local-first agent pairing, chat, and context handoff for persistent and transient AI agents.",
+  "author": {
+    "name": "StoneHub",
+    "email": "",
+    "url": "https://github.com/StoneHub"
+  },
+  "homepage": "https://github.com/StoneHub/agent-link",
+  "repository": "https://github.com/StoneHub/agent-link",
+  "license": "MIT",
+  "keywords": [
+    "a2a",
+    "agent-link",
+    "openclaw",
+    "codex",
+    "tailscale"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Link",
+    "shortDescription": "Pair local, LAN, or Tailnet agents for chat and context handoff.",
+    "longDescription": "Agent Link helps transient coding agents quickly connect to persistent personal agents. Version 0.1 focuses on discovery profiles, human-approved pairing assumptions, chat-only communication, environment briefings, and session handoff summaries. Tool grants are intentionally out of scope until a later scoped authorization layer is added.",
+    "developerName": "StoneHub",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Local",
+      "Agent-to-agent"
+    ],
+    "websiteURL": "https://github.com/StoneHub/agent-link",
+    "privacyPolicyURL": "https://github.com/StoneHub/agent-link",
+    "termsOfServiceURL": "https://github.com/StoneHub/agent-link",
+    "defaultPrompt": [
+      "Use Agent Link to brief me from my persistent home agent.",
+      "Use Agent Link to ask my linked OpenClaw agent what context matters for this project.",
+      "Use Agent Link to send a handoff summary back to my persistent agent."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "agent-link-marketplace",
+  "interface": {
+    "displayName": "Agent Link Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "agent-link",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-link"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "openclaw-home",
+  "transport": "ssh-openclaw-cli",
+  "host": "100.104.71.37",
+  "user": "monroe",
+  "openclawBin": "/home/monroe/.local/bin/openclaw",
+  "agent": "main",
+  "capabilities": [
+    "chat",
+    "brief",
+    "handoff"
+  ],
+  "toolGrants": []
+}
+
