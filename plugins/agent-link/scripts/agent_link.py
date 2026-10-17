@@ -65,14 +65,19 @@ def run_ssh(profile: dict[str, Any], remote_command: str, timeout: int = 60) -> 
         ssh_target(profile),
         remote_command,
     ]
-    return subprocess.run(
-        command,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        timeout=timeout,
-        check=False,
-    )
+    try:
+        return subprocess.run(
+            command,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=timeout,
+            check=False,
+        )
+    except FileNotFoundError:
+        raise SystemExit("ssh is not installed or not on PATH")
+    except subprocess.TimeoutExpired:
+        raise SystemExit(f"No reply from {ssh_target(profile)} within {timeout}s")
 
 
 def openclaw_command(profile: dict[str, Any], *args: str) -> str:
