@@ -1,7 +1,7 @@
 {
   "name": "agent-link-marketplace",
   "interface": {
-    "displayName": "Agent Link Marketplace"
+    "displayName": "Agent Link Marketplace (Deprecated)"
   },
   "plugins": [
     {

@@ -1,6 +1,11 @@
-# Agent Link Design
+# Agent Link Design (historical)
 
 Date: 2026-04-28
+
+Superseded on 2026-10-18 by the Threadspace/Rooms ownership model. This document
+records the original proposal, including unimplemented future protocols and
+grants; it is not a current roadmap or a claim of runtime enforcement. See
+[retirement and migration](retirement.md) for current direction.
 
 ## Goal
 

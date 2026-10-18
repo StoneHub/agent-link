@@ -1,60 +1,28 @@
 ---
 name: agent-link
-description: Connect to a known persistent agent such as OpenClaw over a local, LAN, or Tailnet profile for chat-only briefings and context handoff. Use when Codex needs to ask another agent what it knows about the user, environment, project history, preferences, or needs to send a session summary back. Do not use for remote tool execution; v0.1 is chat and context only.
+description: Deprecated compatibility workflow for an explicitly requested existing Agent Link SSH/OpenClaw profile. Read its retirement guide before using it. New shared workspace and agent integration work belongs to Threadspace clients/connectors and the Rooms backend.
 ---
 
-# Agent Link
+# Agent Link — deprecated
 
-Use Agent Link to reduce Time To Being Useful when a transient agent needs context from a persistent agent.
+Agent Link is retired as a separate product. Read
+[retirement and migration](../../docs/retirement.md) before changing an integration.
+Preserve existing profile data and commands until its consumer has a verified path.
 
-## Rules
+## Existing consumer workflow
 
-- Keep v0.1 chat-only.
-- Do not request remote tool execution through Agent Link.
-- Do not store or echo passwords.
-- Treat Tailnet reachability as network access, not authorization.
-- Ask the user before sending sensitive project content to a linked agent.
-- Prefer a stored profile over rediscovering host paths and agent IDs.
+1. Confirm the user requested the legacy workflow and authorized the target and
+   content. A profile or network reachability is routing information, not consent.
+2. Inspect `python3 plugins/agent-link/scripts/agent_link.py --help` from the repo
+   root, then `profile list` only when needed. Profile output contains host details;
+   keep it private. Maintain profiles only within the requested scope.
+3. Run `probe PROFILE` only when remote contact is authorized. Run `brief`, `ask`
+   or `handoff` only when that agent interaction and disclosure are authorized.
+   Handoff can change remote memory. Keep sensitive context out unless explicitly
+   approved. The helper cannot enforce the remote runtime's tool policy.
+4. Report the actual result. A failed or uncertain reply does not prove a message
+   was unaccepted; reconcile with the runtime owner before repeating a write.
 
-## Helper
-
-From the repo root, use:
-
-```powershell
-python .\plugins\agent-link\scripts\agent_link.py --help
-```
-
-Common commands:
-
-```powershell
-python .\plugins\agent-link\scripts\agent_link.py profile list
-python .\plugins\agent-link\scripts\agent_link.py probe openclaw-home
-python .\plugins\agent-link\scripts\agent_link.py brief openclaw-home
-python .\plugins\agent-link\scripts\agent_link.py ask openclaw-home "What should this agent know before working on this project?"
-python .\plugins\agent-link\scripts\agent_link.py handoff openclaw-home --summary "Changed X, tested Y, next step Z."
-```
-
-## Workflow
-
-1. Run `profile list`.
-2. If no profile exists, create one with `profile add`.
-3. Run `probe <profile>`.
-4. Run `brief <profile>` before doing project work.
-5. Work normally.
-6. Run `handoff <profile> --summary "<summary>"` before ending a session when useful.
-
-## Profile Guidance
-
-The OpenClaw home-agent profile should include:
-
-- `host`: Tailnet hostname or IP
-- `user`: SSH user
-- `openclawBin`: full remote OpenClaw CLI path
-- `agent`: default OpenClaw agent ID, usually `main`
-
-Example:
-
-```powershell
-python .\plugins\agent-link\scripts\agent_link.py profile add openclaw-home --host 100.104.71.37 --user monroe --openclaw-bin /home/monroe/.local/bin/openclaw --agent main
-```
-
+For new work, use the product/architecture links in the retirement guide. Rooms
+owns durable shared records; Threadspace connectors own runtime adaptation. Keep
+personal history, credentials and host policy under their existing owners.
