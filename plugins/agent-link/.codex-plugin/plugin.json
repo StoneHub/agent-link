@@ -1,7 +1,7 @@
 {
   "name": "agent-link",
   "version": "0.1.0",
-  "description": "Local-first agent pairing, chat, and context handoff for persistent and transient AI agents.",
+  "description": "Deprecated Agent Link compatibility helper; superseded as a product by Threadspace/Rooms. Existing SSH/OpenClaw workflows only.",
   "author": {
     "name": "StoneHub",
     "email": "",
@@ -19,9 +19,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Agent Link",
-    "shortDescription": "Pair local, LAN, or Tailnet agents for chat and context handoff.",
-    "longDescription": "Agent Link helps transient coding agents quickly connect to persistent personal agents. Version 0.1 focuses on discovery profiles, human-approved pairing assumptions, chat-only communication, environment briefings, and session handoff summaries. Tool grants are intentionally out of scope until a later scoped authorization layer is added.",
+    "displayName": "Agent Link (Deprecated)",
+    "shortDescription": "Deprecated; retained for existing SSH/OpenClaw workflows.",
+    "longDescription": "Agent Link is deprecated as a separate product. Threadspace owns clients and agent connectors; Rooms owns shared authorization and durable history. Existing helper commands and profiles remain compatible while consumers verify migration. No automatic migration or drop-in replacement is provided. See the repository retirement guide.",
     "developerName": "StoneHub",
     "category": "Productivity",
     "capabilities": [
@@ -33,9 +33,7 @@
     "privacyPolicyURL": "https://github.com/StoneHub/agent-link",
     "termsOfServiceURL": "https://github.com/StoneHub/agent-link",
     "defaultPrompt": [
-      "Use Agent Link to brief me from my persistent home agent.",
-      "Use Agent Link to ask my linked OpenClaw agent what context matters for this project.",
-      "Use Agent Link to send a handoff summary back to my persistent agent."
+      "Explain Agent Link deprecation and the migration guide before using an existing approved legacy profile."
     ],
     "brandColor": "#2563EB"
   }

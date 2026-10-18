@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Agent Link v0 helper.
+"""Deprecated Agent Link v0 compatibility helper.
 
 Stores named SSH/OpenClaw profiles and sends chat-only messages to a remote
 OpenClaw agent. It intentionally does not store passwords or expose tools.
@@ -186,7 +186,7 @@ def cmd_handoff(args: argparse.Namespace) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Agent Link chat-only profile helper")
+    parser = argparse.ArgumentParser(description="DEPRECATED: Agent Link compatibility helper. New integration work belongs to Threadspace/Rooms; see README.md and plugins/agent-link/docs/retirement.md.")
     sub = parser.add_subparsers(dest="command", required=True)
 
     profile = sub.add_parser("profile", help="Manage profiles")
