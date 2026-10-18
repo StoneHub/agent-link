@@ -7,7 +7,9 @@ description: Deprecated compatibility workflow for an explicitly requested exist
 
 Agent Link is retired as a separate product. Read
 [retirement and migration](../../docs/retirement.md) before changing an integration.
-Preserve existing profile data and commands until its consumer has a verified path.
+This repository is archived. Preserve private profile data and history; route any
+later demonstrated integration need to the existing Threadspace backlog. Runtime
+parity and host inventory are future work, not source-retirement gates.
 
 ## Existing consumer workflow
 

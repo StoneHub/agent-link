@@ -2,13 +2,16 @@
 
 Tracking: [retirement issue #2](https://github.com/StoneHub/agent-link/issues/2).
 
-Decision date: 2026-10-18. Agent Link is deprecated as a separate product in favor
-of Threadspace, with Rooms as its backend. Source deprecation preserves the
-legacy helper and plugin identity; it does not archive this repository or change
-an installed plugin, profile, remote host or runtime.
+Decision date: 2026-10-18. Agent Link is retired as a separate product in favor
+of Threadspace, with Rooms as its backend. Monroe authorized merging this notice
+and archiving the repository now, preserving all source/history. The active
+repositories are `t3code` and `t3rooms`. Runtime parity and other-host inventory
+are later product work, not retirement or archival prerequisites. Installations,
+private profiles, credentials, remote hosts and runtimes remain untouched.
 
 ## Authoritative owners
 
+- [Authoritative reconciliation and later work](https://github.com/benwilliams0540/t3code/blob/main/docs/operations/agent-link-retirement.md)
 - [Threadspace product direction](https://github.com/benwilliams0540/t3code/blob/main/docs/product/threadspace.md)
 - [Architecture and module owners](https://github.com/benwilliams0540/t3code/blob/main/docs/architecture/threadspace.md)
 - [Rooms backend](https://github.com/benwilliams0540/t3rooms/blob/main/README.md)
@@ -19,6 +22,8 @@ an installed plugin, profile, remote host or runtime.
 Reviewed source baselines: Agent Link `28bad254bf7716cda9d741153ea74420680c7806`,
 Threadspace `d224442a20ec75f983e2d696b784f6b2f1bb3a62`, Rooms
 `235d376b879326aece915b560ddd91aff91119f7`. Links to `main` follow later changes.
+The final retirement direction is integrated in Threadspace main at
+`39d876a7fe9bba48a47701a2641655b2304f9422` (PR #50).
 Source documentation and protocol behavior do not establish a working replacement
 on a particular host or installed client.
 
@@ -42,48 +47,49 @@ on a particular host or installed client.
 - Other hosts and unindexed repositories remain unverified. No credentials,
   profile contents or remote agents were inspected or contacted for this retirement.
 - No existing issue or open PR covered retirement when checked. The retirement
-  issue tracks remaining consumer reconciliation and final archival criteria.
+  issue records the completed source retirement; later demonstrated needs belong
+  in the existing Threadspace backlog.
 
 The helper, plugin name `agent-link`, marketplace source, command arguments,
-stdout/exit behavior and profile schema/storage remain available because the
-external runbook and unverified other-host usage lack a completed migration.
-Only CLI help/docstring and discovery descriptions change. The original design
-and implementation remain in Git and in this checkout for inspection and reuse.
+stdout/exit behavior and profile schema/storage are preserved as historical
+source, not an actively maintained compatibility product. Only CLI help/docstring
+and discovery descriptions change. The original design and implementation remain
+in Git and in this checkout for inspection and reuse. No source is imported into
+Threadspace merely to keep the former project alive.
 
-## Existing consumer migration instructions
+## Later consumer migration guidance
 
-1. The consumer owner inventories their explicitly authorized machines: entry
-   points, installed plugin version, profile store location (including custom
-   `AGENT_LINK_HOME`), scheduled callers and which commands are actually used.
-   Record metadata and owner in the retirement issue; keep private contents local.
-2. Choose the relevant existing Threadspace owner above. Verify its real supported
-   host/runtime capabilities and configuration. If no suitable implementation
-   exists, keep the legacy workflow and track the specific gap with that owner.
-3. Prepare an explicit migration for that consumer. Keep profiles and private
-   history intact; separately authorize any shared context handoff. A room
-   membership or SSH profile is not a tool grant or credential migration.
-4. Verify with the intended runtime and authorized client identities: distinct
-   conversations, continued sessions, scoped membership, retained history, stable
-   request IDs, safe retry/reconnect and visible uncertain acceptance/cancellation.
-   Reconcile uncertain writes before retrying. Source fixtures alone are insufficient.
-5. Switch that consumer only after acceptance. Its owner updates callers/docs and
-   records exact revisions, observed behavior and rollback path in the issue.
-   Retain the old helper/profile until that consumer confirms it can stop using it.
+Retirement is complete independently of runtime parity. If an actual consumer
+surfaces, its owner records the demonstrated need in the existing Threadspace
+backlog: [#11 runtime acceptance](https://github.com/benwilliams0540/t3code/issues/11),
+[#26 product milestone](https://github.com/benwilliams0540/t3code/issues/26), or
+[#23 project context](https://github.com/benwilliams0540/t3code/issues/23).
+The authoritative reconciliation above maps each former helper capability.
 
-## Remaining before final archival
+Keep existing profiles and personal history private and intact. No automatic
+profile conversion, personal-memory import or CLI parity is provided. Any later
+shared summary needs explicit destination and content authorization. Room
+membership and SSH routing hints do not grant runtime tools or credentials.
+Verify a proposed replacement on its intended runtime/clients when that product
+work is undertaken, preserving scope, stable request IDs, idempotence, receipts
+and honest uncertain-write behavior. Reconcile uncertain writes before retrying.
+Those are future integration requirements, not gates on this archive.
 
-The retirement issue owner coordinates consumer owners; Threadspace/Rooms owners
-implement any accepted gaps in their own repositories. Fleet's documentation owner
-reconciles the Windows runbook separately. This task does not edit those repos.
+## Final disposition
 
-Archive only after known references and authorized host inventories are resolved,
-remaining consumers have verified migration or an explicit retained legacy owner,
-and useful work/history has an accessible home. Removing plugins/profiles,
-changing hosts and archiving the GitHub repository each require separate authority.
-No such action is part of source deprecation.
+Merge PR #3 to `main`, close retirement issue #2 and archive this GitHub repository
+under Monroe's explicit direction. Preserve its files and Git history. Fleet's
+Windows controller reference was reconciled separately on Fleet main at
+[`82a9bbb`](https://github.com/StoneHub/fleet/commit/82a9bbb). It directs new shared
+work to Threadspace and does not block this retirement. Other-host inventory is needed only
+before later removal or claims about installed usage, not before source archival.
+
+No plugins are uninstalled, profiles removed, hosts changed or runtime parity
+claimed. Threadspace/Rooms owners own future accepted needs in their existing
+repositories; Agent Link has no continuing active development lane.
 
 The canonical local checkout is retained at
-`/Users/monroe/Developer/GitRepos/agent-link` for ongoing review and compatibility
-work, owned by the Agent Link retirement task. It is not a disposable review clone;
-any future removal requires a separate decision. No services or build outputs are
-created by this change.
+`/Users/monroe/Developer/GitRepos/agent-link` as the preserved archival checkout,
+owned by Monroe. It is not a disposable review clone; any future removal requires
+a separate decision. Remove the merged task branch after integration. No services
+or build outputs were created by this change.

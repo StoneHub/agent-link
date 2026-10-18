@@ -1,8 +1,8 @@
-# Agent Link — deprecated
+# Agent Link — retired (archived)
 
-**Deprecated as a separate product on 2026-10-18.** Threadspace owns the shared
+**Retired as a separate product on 2026-10-18; this repository is archived.** Threadspace owns the shared
 workspace; Rooms is its backend. New integration work belongs in those existing
-owners. This repository retains the legacy SSH/OpenClaw helper for compatibility.
+owners. This repository preserves the legacy SSH/OpenClaw helper and history as a read-only reference.
 Deprecation does not mean a working drop-in replacement exists.
 
 - [Threadspace product direction](https://github.com/benwilliams0540/t3code/blob/main/docs/product/threadspace.md)
@@ -18,15 +18,16 @@ client state. Its agent connectors own runtime adaptation, delivery, acceptance
 receipts and reconciliation; the host runtime owns actual sessions and execution.
 The Python helper here is a local SSH/OpenClaw scaffold, not an application backend.
 
-Existing consumers may keep their current helper and profiles while their owner
-verifies a migration. Keep private agent history private unless an explicit,
+Existing installations and private profiles remain untouched. Any consumer that
+surfaces later should bring its actual need to the existing Threadspace backlog. Keep private agent history private unless an explicit,
 scoped handoff authorizes sharing. No automatic profile conversion, history
 import, credential transfer or host reconfiguration is provided. Follow the
 [migration instructions](plugins/agent-link/docs/retirement.md) before switching.
 
 ## Legacy compatibility usage
 
-The existing plugin ID, helper path, commands and profile format are retained.
+The historical plugin ID, helper path, commands and profile format are preserved
+in this archive. There is no active standalone roadmap or compatibility service.
 Use these only for an explicitly requested existing Agent Link workflow; new
 users should start with Threadspace's product and architecture documents above.
 
