@@ -1,6 +1,8 @@
-# Agent Link — retired (archived)
+# Agent Link — retired
 
-**Retired as a separate product on 2026-10-18; this repository is archived.** Threadspace owns the shared
+**Retired as a separate product on 2026-10-18.**
+Repository archival is pending a direct Monroe confirmation after automatic
+approval review blocked the archive action; see [issue #2](https://github.com/StoneHub/agent-link/issues/2#issuecomment-6247278009). Threadspace owns the shared
 workspace; Rooms is its backend. New integration work belongs in those existing
 owners. This repository preserves the legacy SSH/OpenClaw helper and history as a read-only reference.
 Deprecation does not mean a working drop-in replacement exists.
