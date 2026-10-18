@@ -77,6 +77,11 @@ Those are future integration requirements, not gates on this archive.
 
 ## Final disposition
 
+Source retirement is merged. Automatic approval review blocked repository
+archival pending direct Monroe confirmation; the exact blocker and next action
+are recorded in [issue #2](https://github.com/StoneHub/agent-link/issues/2#issuecomment-6247278009).
+The repository remains unarchived until that action succeeds.
+
 Merge PR #3 to `main`, close retirement issue #2 and archive this GitHub repository
 under Monroe's explicit direction. Preserve its files and Git history. Fleet's
 Windows controller reference was reconciled separately on Fleet main at
